@@ -38,3 +38,10 @@ def nested_sum_3(ni, nj, nk):
                 s += i + j + k
     return s
 
+
+def numpy_range(lst_numbers):
+    import numpy as np
+    arr = np.array(lst_numbers)
+    rng = [np.min(arr), np.max(arr)]
+    return rng
+

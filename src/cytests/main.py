@@ -38,6 +38,12 @@ def main():
 	py = timeit('funcs.nested_sum_3(100,100,100)', setup='from cytests import funcs',number=10)
 	cy = timeit('_funcs.nested_sum_3(100,100,100)', setup='from cytests import _funcs',number=10)
 	print_report(py,cy)
+	# TEST 6
+	print("Test: numpy_range(lst_numbers); number = 10")
+	lst_numbers = [20, 13, 12314, 1 , 324, 12, -22]
+	py = timeit(f'funcs.numpy_range({lst_numbers})', setup='from cytests import funcs',number=10)
+	cy = timeit(f'_funcs.numpy_range({lst_numbers})', setup='from cytests import _funcs',number=10)
+	print_report(py,cy)
 
 
 	

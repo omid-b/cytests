@@ -40,3 +40,10 @@ cpdef int nested_sum_3(int ni, int nj, int nk):
             for k in range(nk):
                 s += i + j + k
     return s
+
+cpdef list numpy_range(list lst_numbers):
+    import numpy as np
+    cdef list rng
+    arr = np.array(lst_numbers)
+    rng = [np.min(arr), np.max(arr)]
+    return rng
